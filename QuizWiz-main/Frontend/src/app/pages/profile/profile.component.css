@@ -1,0 +1,44 @@
+ .profile-image {
+    max-width: 150px;
+    max-height: 150px;
+    border: 5px solid darkgray;
+    border-radius: 50%;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table tr td {
+    padding: 8px 1px;
+    border: 0.5px solid #e2e2e2;
+  }
+   
+
+   .demo-table {
+    width: 100%;
+  }
+  
+  .mat-row .mat-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+  }
+  
+  .mat-row:hover .mat-cell {
+    border-color: currentColor;
+  }
+  
+  .demo-row-is-clicked {
+    font-weight: bold;
+  }
+
+  tr:hover {
+    background-color: #ddd;
+  }
+
+  .head{
+    background-color: #abaaada6;
+    font-weight: bold;
+  }

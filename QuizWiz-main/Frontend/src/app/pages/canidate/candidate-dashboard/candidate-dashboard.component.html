@@ -1,0 +1,90 @@
+<div *ngIf="user.exam.active!=0" class="bootstrap-wrapper mt">
+    <div class="container" style="margin-top: 4rem;">
+
+
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-6 offset-md-3">
+
+                <mat-card>
+
+
+
+                    <div class="row">
+
+                        <div class="col-md-10 offset-md-1">
+                            <h1 class="text-center">Candidate Details</h1>
+                            <!-- //table Details  -->
+                            <table class="table text-center">
+                                <tr>
+                                    <td>
+                                        <mat-icon>account_circle</mat-icon>
+                                    </td>
+                                    <td>{{user.firstName}} {{user.lastName}}</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <mat-icon>mail</mat-icon>
+                                    </td>
+                                    <td>{{user.email}}</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <mat-icon>call</mat-icon>
+                                    </td>
+                                    <td>{{user.phone}}</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <mat-icon>quiz</mat-icon>
+                                    </td>
+                                    <td>{{user.exam.title}}</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <mat-icon>pending_actions</mat-icon>
+                                    </td>
+                                    <td>{{user.exam.date}} {{user.exam.time}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+
+
+                    <form>
+
+                        <!-- button -->
+
+                        <div class="container text-center mt20 mb20">
+                            <button [routerLink]="'/instructions/'+user.exam.title+'/'+user.exam.exId" mat-raised-button
+                                color="primary">Next</button>
+                        </div>
+
+                    </form>
+
+                </mat-card>
+
+                <br><br>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+
+
+<div class="bootstrap-wrapper mt" *ngIf="user.exam.active==0" id="component1">
+    <h4 style="padding: 2rem;">Welcome, <b>{{user.firstName}} {{user.lastName}}</b></h4>
+    <div class="row mt20" style="padding: 6rem;">
+        <div class="col-md-7 offset-md-3">
+            <mat-card class="text-center mt20" style="background-color: rgba(228, 126, 126, 0.438);">
+
+                <h1 style="color: red;font-weight: bold;">Exam schedule not available</h1>
+            </mat-card>
+        </div>
+    </div>
+</div>
